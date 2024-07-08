@@ -19,5 +19,18 @@ root.render(
   <>
     <App sendinfo ={myinfo[0]}></App>
     <App sendinfo ={myinfo[1]}></App>
+
+    {
+      myinfo.map((ele, idx)=>{
+          return(
+              <App sendinfo={myinfo[idx]}></App>
+          )
+      })
+    }
+
+    {
+	    myinfo.map((ele, idx)=> <App sendinfo={myinfo[idx]}></App>) 
+    }
+
   </>
 );
