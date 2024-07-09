@@ -1,7 +1,9 @@
+import datainfo from './data/db.json';
+import MainBanner from './Banner';
 function App(props) {
     return (
         <div>
-            <p>
+            {/* <p>
                 {props.sendinfo.price}
             </p>
             <p>
@@ -9,7 +11,23 @@ function App(props) {
             </p>
             <p>
                  {props.sendinfo.protext}
-            </p>
+            </p> */}
+            <div className="App">
+                <ul>
+                    {
+                    datainfo["gnb"].map((v , i) => {
+                        return (
+                        <li>
+                            <a href={v.href}>
+                            {v.atext}
+                            </a>
+                        </li>
+                        )
+                    })
+                    }
+                </ul>
+                <MainBanner></MainBanner>
+            </div>
         </div>
     )
 }
