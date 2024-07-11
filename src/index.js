@@ -6,12 +6,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import App3 from './App3Router';
-import { BrowserRouter } from 'react-router-dom';
+import App4 from './App4useState';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <BrowserRouter>
-        <App3 />
-    </BrowserRouter>
+  <React.StrictMode>
+    <App4 />
+  </React.StrictMode>
 );
