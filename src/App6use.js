@@ -17,10 +17,17 @@ function App() {
       <div className="App">
         <button onClick={() => {
           setCount( count < bgcolor.length -1 ? count + 1 : 0  ); // 대입식 절대 불가! 연산식만
+                  // if ( count < bgcolor.length -1 ) { count +1 } else { 0 }
+                  // bgcolor.length = 4 , bgcolor.length -1 = 3 으로 bgcolor 의 마지막 인덱스를 가리킨다.
+                  // count 가 0, 1, 2 일 때는 1, 2, 3 으로 증가한다.
+                  // count 가 3(마지막 인덱스)일 때는 0(처음 인덱스)으로 돌아간다.
         }}> {count} 증가 </button>
 
         <button onClick={() => {
           setCount( count > 0 ? count - 1 : bgcolor.length -1 );
+                  // if ( count > 0 ) { count - 1 } else { bgcolor.length -1 }
+                  // count 가 1, 2, 3 일 때는 0, 1, 2 로 감소한다.
+                  // count 가 0(처음 인덱스)일 때는 3(마지막 인덱스)으로 돌아간다.
         }}> {count} 감소 </button>
       </div>
       <div>
