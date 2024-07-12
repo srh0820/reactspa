@@ -6,11 +6,11 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import App5 from './App5useEffect';
+import App from './App6use';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App5 />
+    <App />
   </React.StrictMode>
 );
